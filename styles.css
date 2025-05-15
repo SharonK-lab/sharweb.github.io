@@ -1,0 +1,205 @@
+/* Variables for colors and fonts */
+:root {
+  --primary-color: #003366;
+  --primary-dark: #002244;
+  --background-color: #f9fafb;
+  --text-color: #222222;
+  --surface-color: #ffffff;
+  --border-color: #cccccc;
+  --input-border: #999999;
+  --success-color: #2d7a2d;
+}
+
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.horizontal-nav {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal-nav li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.horizontal-nav li a:hover,
+.horizontal-nav li a:focus,
+.horizontal-nav li a[aria-current="page"] {
+  background-color: var(--primary-dark);
+  outline: none;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--primary-color);
+  color: white;
+  position: relative;
+}
+
+footer button#themeToggleBtn {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-dark);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Section & article styling */
+section, article, aside {
+  margin-bottom: 2rem;
+}
+
+/* Image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Lists styling */
+ul, ol {
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+ul ul, ol ul {
+  list-style-type: circle;
+}
+
+/* Link styling */
+a {
+  color: var(--primary-color);
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Box Model and spacing */
+p, li {
+  margin-bottom: 0.75rem;
+}
+
+/* Navigation bars vertical styling (for potential vertical navs) */
+.vertical-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  border-right: 1px solid var(--border-color);
+}
+
+.vertical-nav li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.vertical-nav li a:hover,
+.vertical-nav li a:focus {
+  background-color: var(--primary-color);
+  color: white;
+  outline: none;
+}
+
+/* Print-friendly CSS - for the resume section (We don't have an explicit resume page, but print styles can be applied as example) */
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+  nav, footer, button {
+    display: none !important;
+  }
+  main {
+    margin: 0;
+  }
+}
+
+/* Positioning and z-index example for layered content */
+/* Could be for floating buttons or banners */
+#floatingBanner {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  z-index: 2000;
+}
+
+/* Dark mode styles toggled by JS */
+body.dark-mode {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --surface-color: #1f1f1f;
+  --border-color: #444;
+  --input-border: #666;
+  --primary-color: #bb86fc;
+  --primary-dark: #9a67ea;
+  --success-color: #6bd46b;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: var(--primary-dark);
+}
+
+body.dark-mode a {
+  color: var(--primary-color);
+}
+

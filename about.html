@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About Me - SharonK Portfolio</title>
+<meta name="description" content="About SharonK, his skills, background, and experience as a web developer." />
+<meta name="keywords" content="about, skills, SharonK, web developer" />
+<meta name="author" content="SharonK" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* Internal CSS specific to About page 2-column layout */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+.about-text,
+.about-skills {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <ul class="horizontal-nav" role="menubar" aria-label="Primary Navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a aria-current="page" href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="survey.html">Survey</a></li>
+    </ul>
+  </nav>
+
+</header>
+<main>
+  <section class="about-container" aria-label="About Me Information">
+    <article class="about-text">
+      <h1>About Me</h1>
+      <p>Hi! I’m Sharon Kaaya, a web developer with a passion for crafting beautiful, functional websites. I have a background in computer IT, and I love learning new technologies.</p>
+      <p>Some of my strengths include problem-solving, teamwork, and attention to detail. I enjoy working on projects from idea to deployment, always ensuring user-friendly experiences.</p>
+    </article>
+    <aside class="about-skills" aria-label="Skills and Technologies">
+      <h2>My Skills</h2>
+      <ul>
+        <li>Programming Languages
+          <ul>
+            <li>JavaScript (ES6+)</li>
+            <li>HTML5 &amp; CSS3</li>
+            <li>Python</li>
+          </ul>
+        </li>
+        <li>Frameworks &amp; Libraries
+          <ul>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Bootstrap</li>
+          </ul>
+        </li>
+        <li>Tools &amp; Platforms
+          <ul>
+            <li>Git &amp; GitHub</li>
+            <li>VS Code</li>
+            <li>Chrome DevTools</li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+  </section>
+</main>
+<footer>
+  <p>© 2025 Sharon Kaaya</p>
+  <button id="themeToggleBtn" aria-pressed="false">Toggle Dark/Light Mode</button>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

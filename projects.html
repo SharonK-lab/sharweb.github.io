@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Projects -  Portfolio</title>
+<meta name="description" content="Explore the projects and portfolio of SharonK, showcasing development skills and completed work." />
+<meta name="keywords" content="projects, portfolio, web development, SharonK" />
+<meta name="author" content="SharonK" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* Internal CSS for 3-column layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.project-card {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1rem;
+  background-color: var(--surface-color);
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+.project-card:focus-within,
+.project-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  outline: none;
+}
+.project-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.project-details {
+  display: none;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+.project-card.expanded .project-details {
+  display: block;
+}
+.project-link {
+  margin-top: 0.75rem;
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+.project-link:hover,
+.project-link:focus {
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <ul class="horizontal-nav" role="menubar" aria-label="Primary Navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a aria-current="page" href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="survey.html">Survey</a></li>
+    </ul>
+  </nav>
+  
+</header>
+<main>
+  <section aria-label="Portfolio Projects">
+    <h1>My Projects</h1>
+    <div class="projects-grid" id="projectsGrid">
+      <article class="project-card" tabindex="0">
+        <h2 class="project-title">Project One</h2>
+        <p class="project-short">Responsive website for a local business.</p>
+        <div class="project-details" aria-hidden="true">
+          <p>Built with HTML5, CSS3, and JavaScript. Features mobile-friendly layouts and interactive elements.</p>
+        </div>
+      </article>
+      <article class="project-card" tabindex="0">
+        <h2 class="project-title">Project Two</h2>
+        <p class="project-short">E-commerce product landing page.</p>
+        <div class="project-details" aria-hidden="true">
+          <p>Developed with React and styled-components. Includes cart functionality and user authentication.</p>
+        </div>
+      </article>
+      <article class="project-card" tabindex="0">
+        <h2 class="project-title">Project Three</h2>
+        <p class="project-short">Personal blog platform.</p>
+        <div class="project-details" aria-hidden="true">
+          <p>Created with Node.js and Express backend, with a MongoDB database and user comments.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>© 2025 Sharon Kaaya</p>
+  <button id="themeToggleBtn" aria-pressed="false">Toggle Dark/Light Mode</button>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

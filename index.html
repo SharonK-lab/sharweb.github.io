@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sharon's - Personal Portfolio</title>
+<meta name="description" content="Personal portfolio of SharonK, showcasing projects, skills, and contact information." />
+<meta name="keywords" content="portfolio, web developer, projects, contact, John Doe" />
+<meta name="author" content="SharonK" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+/* Internal CSS for homepage-specific */
+h1.greeting {
+  margin-top: 1rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+</style>
+</head>
+<body>
+    
+<header>
+  <nav>
+    <ul class="horizontal-nav" role="menubar" aria-label="Primary Navigation">
+      <li role="none"><a role="menuitem" href="index.html" aria-current="page">Home</a></li>
+      <li role="none"><a role="menuitem" href="about.html">About Me</a></li>
+      <li role="none"><a role="menuitem" href="projects.html">Projects</a></li>
+      <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+      <li role="none"><a role="menuitem" href="survey.html">Survey</a></li>
+    </ul>
+  </nav>
+  
+</header>
+<main>
+  <section aria-label="Introduction">
+    <h1>Welcome to My Portfolio</h1>
+    <h2 class="greeting" id="greeting"></h2>
+    <p>Hello! My name is Sharon Kaaya, a passionate web developer experienced in building modern and responsive websites. Take a look around to learn more about my skills and projects.</p>
+    <figure>
+      <img src="shar.jpg" alt="Portrait photo of Sharon" width="300" height="300" />
+      <figcaption>Sharon - Web Developer</figcaption>
+    </figure>
+    <p>Feel free to <a href="contact.html">contact me</a> or check out my <a href="projects.html#featured">featured projects</a>.</p>
+   
+  </section>
+  <section aria-label="Featured Video">
+    <h2>Watch an introduction video on what is webdevelopment</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5oAoBKYR2aY?si=xOwox1h8_auVp574" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+</main>
+<footer>
+  <p>Connect with me on
+    <a href="sharonkaaya16@gmail.com" style="color:white;">Email</a>
+  </p>
+  <button id="themeToggleBtn" aria-pressed="false">Toggle Dark/Light Mode</button>
+  <p>© 2025 Sharon. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
+
